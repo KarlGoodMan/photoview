@@ -10,6 +10,18 @@ export default defineConfig({
   envPrefix: ['VITE_', 'REACT_APP_'],
   server: {
     port: 1234,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4001', // 指向你的 Go 后端端口
+        changeOrigin: true,
+        secure: false,
+      },
+      '/graphql': {
+        target: 'http://localhost:4001',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
   },
   esbuild: {
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
