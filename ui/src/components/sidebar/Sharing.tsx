@@ -360,10 +360,6 @@ const MorePopover = ({ id, share, query }: MorePopoverProps) => {
       <Popover.Panel>
         <ArrowPopoverPanel width={260}>
           <MorePopoverSectionPassword id={id} share={share} query={query} />
-          {/* <div className="px-4 py-2 border-t border-gray-200 dark:border-dark-border mt-2 mb-2">
-            <Checkbox label="Expiration date" />
-            <TextField className="mt-2 w-full" />
-          </div> */}
           <MorePopoverSectionExpiration id={id} share={share} query={query} />
         </ArrowPopoverPanel>
       </Popover.Panel>
